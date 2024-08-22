@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block header %}
+<script src="{% static 'form.js' %}" defer></script>
+{% endblock header %}
+{% block main %}
+<div id="chat" class="overflow-auto">
+    <article>
+        <header><kbd>System</kbd></header>
+        <p>Hi there! Ask any question about a professor or class and I'll try to help!</p>
+    </article>
+</div>
+  <form id="chat-form">
+    {% csrf_token %}
+    <fieldset role="group">
+      <input id="chat-input" name="text" type="text" placeholder="Type to start chatting..."  />
+      <input type="submit" value="Send" />
+    </fieldset>
+  </form>
+{% endblock main %}

@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.amber.min.css">
+  {% block header %}{% endblock header %}
+  <title>Rate My Professor, AI</title>
+</head>
+<body class="container">
+  <header>
+    <hgroup>
+      <h1>RMP AI</h1>
+      <p>Here you can find out all there is to know about your future professors.</p>
+    </hgroup>
+  </header>
+  <main>
+    {% block main %}{% endblock main %}
+  </main>
+  <footer>
+    {% block footer %}{% endblock footer %}
+  </footer>
+</body>
+</html>
